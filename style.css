@@ -1,0 +1,9 @@
+/* 24.08.26 */
+/* hand dodge game */
+
+#webcam {
+    width: 320px;
+    height: 240px;
+    border: 2px solid black;
+}
+
