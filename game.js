@@ -65,6 +65,7 @@ const player = {
 
 // function for drawing player
 function drawPlayer() {
+    ctx.fillStyle = "cyan";
     ctx.fillRect(player.x, player.y, player.width, player.height);
 }
 
@@ -86,6 +87,7 @@ let gameOver = false;
 
 // drawing function for obstacle
 function drawObstacle() {
+    ctx.fillStyle = "orange";
     ctx.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
 }
 

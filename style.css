@@ -7,3 +7,15 @@
     border: 2px solid black;
 }
 
+body {
+    background: #050816;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#gameCanvas {
+    background: #0d1326;
+    border: 3px solid white;
+    border-radius: 12px;
+}
