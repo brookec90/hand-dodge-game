@@ -84,6 +84,7 @@ const obstacle = {
 let score = 0;
 let lives = 3;
 let gameOver = false;
+let highScore = 0;
 
 // drawing function for obstacle
 function drawObstacle() {
@@ -96,13 +97,14 @@ function drawScore() {
     ctx.font = "20px Arial";
     ctx.textAlign = "left";
     ctx.fillText("Score: " + score, 10, 30);
+    ctx.fillText("High Score: " + highScore, 10, 60);
 }
 
 // function for lives
 function drawLives() {
     ctx.font = "20px Arial";
     ctx.textAlign = "left";
-    ctx.fillText("Lives: " + lives, 10, 60);
+    ctx.fillText("Lives: " + lives, 10, 90);
 }
 
 function drawGameOver() {
@@ -119,7 +121,7 @@ function restartGame() {
     lives = 3;
     gameOver = false;
 
-    player.x = 375
+    player.x = 375;
     player.y = 500;
 
     obstacle.x = 200;
@@ -177,7 +179,9 @@ function gameLoop() {
 
     if (obstacle.y > canvas.height) {
         score++;
-
+        if (score > highScore) {
+            highScore = score;
+        }
         obstacle.y = 0;
         obstacle.x = Math.random() * (canvas.width - obstacle.width);
     }
