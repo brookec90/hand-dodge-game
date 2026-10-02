@@ -182,6 +182,12 @@ function gameLoop() {
         if (score > highScore) {
             highScore = score;
         }
+        
+        //increase speed every 5 points
+        if (score % 5 == 0) {
+            obstacle.speed += 0.5;
+        }
+
         obstacle.y = 0;
         obstacle.x = Math.random() * (canvas.width - obstacle.width);
     }
